@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Edit Project</title>
+
+    <!--Nav Bar-->
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Meniu</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/listProjects">List of Project</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <div class="container" >
+    <h1>Edit Project</h1><br>
+    <form action="/update/<%= data.id %> " method="POST" >
+        <label for="projectName" >Project Name:</label>
+        <input type="text" class="form-control" placeholder="Project Name" name="projectName" id="projectName"  value="<%= data.name_project %>" style="width: 575px">
+        <br><br>
+        <label for="textProject">Project body:</label><br><br>
+        <textarea type="text" rows="25" cols="75"  placeholder="Insert text" name="textProject" id="textProject"><%= data.text_project %></textarea>
+         <br><br>
+         <label for="Syntax Highlighting">Curent Syntax Highlighting: <%= data.syntax_highlighting %></label>
+         <br>
+         <select name="syntaxHighlighting" id="syntaxHighlighting" >
+            <option selected>Open this select menu</option>
+            <option value="C++">C++</option>
+            <option value="Java">Java</option>
+            <option value="Python">Python</option>
+            <option value="Javascript">Javascript</option>
+         </select>
+         <br>
+         <br>
+        <button class="btn btn-info">Update</button><br><br><br>
+    </form>
+</div>
+
+</body>
+
+</html>
