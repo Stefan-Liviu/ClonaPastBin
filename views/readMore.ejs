@@ -18,7 +18,7 @@
               <a class="nav-link active" aria-current="page" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/listProjects">List of Project</a>
+              <a class="nav-link" href="/post/listPosts">List of Project</a>
             </li>
           </ul>
         </div>
@@ -38,7 +38,7 @@
         <h5 class="card-title"><%= data.name_project %></h5>
         <p class="card-text"><%= data.text_project %></p>
         <p class="date" ><%= data.date_project %></p>
-        <a href="/edit/<%= data.id %>" class="btn btn-primary">edit</a>
+        <a href="/post/<%= data.id %>/edit" class="btn btn-primary">edit</a>
       </div>
     </div>
   </div>  
