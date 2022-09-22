@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=\, initial-scale=1.0">
-    <title>Edit Project</title>
+    <title>Clona Past Bin</title>
 
     <!--Nav Bar-->
     <nav class="navbar navbar-expand-lg bg-light">
@@ -20,7 +20,7 @@
               <a class="nav-link active" aria-current="page" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/listProjects">List of Project</a>
+              <a class="nav-link" href="/post/listPosts">List of Project</a>
             </li>
           </ul>
         </div>
@@ -35,8 +35,8 @@
 
   <div class="container" >
     <h1>Edit Project</h1><br>
-    <form action="/update/<%= data.id %> " method="POST" >
-        <label for="projectName" >Project Name:</label>
+    <form action="/post/<%= data.id %>/update" method="POST" >
+        <label for="projectName">Project Name:</label>
         <input type="text" class="form-control" placeholder="Project Name" name="projectName" id="projectName"  value="<%= data.name_project %>" style="width: 575px">
         <br><br>
         <label for="textProject">Project body:</label><br><br>
