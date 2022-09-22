@@ -18,10 +18,10 @@
               <a class="nav-link active" aria-current="page" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/listProjects">List of Project</a>
+              <a class="nav-link" href="/post/listPosts">List of Project</a>
             </li>
           </ul>
-          <form action="/searchPage"  class="d-flex" >
+          <form action="/post/searchPost"  class="d-flex" >
             <input class="form-control me-2"  name="search" id="search" placeholder="Search a Project" >
             <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
@@ -55,10 +55,10 @@
                   <td class="demo"><span><%= data.text_project %></span></td>
                   <td><%= data.syntax_highlighting %></td>
                   <td><%= data.date_project %></td>
-                  <td><a href="/readMore/<%=data.id %>" class="btn btn-info">Read More</a></td>
-                  <td><a href="/edit/<%= data.id %>" class="btn btn-secondary">Edit</a></td>
+                  <td><a href="/post/<%=data.id %>/readMore" class="btn btn-info">Read More</a></td>
+                  <td><a href="/post/<%= data.id %>/edit" class="btn btn-secondary">Edit</a></td>
                   <td>
-                    <a  href="/delete/<%= data.id %>"  class="d-inline">
+                    <a  href="/post/<%= data.id %>/delete"  class="d-inline">
                       <button type="submit" class="btn btn-danger">DELETE</button>
                   </td>
               </tr>
