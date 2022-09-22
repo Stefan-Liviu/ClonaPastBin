@@ -18,10 +18,10 @@
               <a class="nav-link active" aria-current="page" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/listProjects">List of Project</a>
+              <a class="nav-link" href="/post/listPosts">List of Project</a>
             </li>
           </ul>
-          <form action="/searchPage"  class="d-flex" >
+          <form action="/post/searchPost"  class="d-flex" >
             <input class="form-control me-2"  name="search" id="search" placeholder="Search a Project" >
             <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
@@ -36,7 +36,7 @@
 <body>
     <div class="container" >
         <h1>Clona Past Bin</h1><br>
-        <form action="/create" method="POST" >
+        <form action="/post/create" method="POST" >
             <label for="projectName" >Project Name:</label>
             <input type="text" class="form-control" placeholder="Project Name" name="projectName" id="projectName" style="width: 575px">
             <br><br>
