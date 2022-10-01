@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyparser = require('body-parser');
 const indexRouter = require('./routes/index');
-const userRouter = require('./routes/users');
+const postRouter = require('./routes/post');
 
 const app = express();
 const port = 3000;
@@ -17,7 +17,7 @@ app.use(bodyparser.json());
 
 
 app.use('/', indexRouter);
-app.use('/', userRouter);
+app.use('/', postRouter);
 
 app.listen(port, () => {
     console.log('App listening on port', port);
